@@ -143,6 +143,7 @@ function App() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
+                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                 label="Presión Arterial Sistólica"
                 type="number"
                 value={sistolica}
@@ -152,6 +153,7 @@ function App() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                 label="Presión Arterial Diastólica"
                 type="number"
                 value={diastolica}
@@ -161,6 +163,7 @@ function App() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                 label="Frecuencia Respiratoria"
                 type="number"
                 value={frecuenciaRespiratoria}
@@ -170,6 +173,7 @@ function App() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                 label="Frecuencia Cardíaca"
                 type="number"
                 value={frecuenciaCardiaca}
@@ -179,6 +183,7 @@ function App() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                 label="%O2 Requerido"
                 type="number"
                 value={porcentajeO2}
@@ -188,6 +193,7 @@ function App() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                 label="Temperatura"
                 type="number"
                 value={temperatura}
