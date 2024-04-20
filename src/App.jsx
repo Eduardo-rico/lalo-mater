@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
-    height: "100vh",
-    paddingTop: theme.spacing(10), // Ajuste de padding en la parte superior
-    marginTop: theme.spacing(5),
+    justifyContent: "flex-start", // Alinear el contenido hacia arriba
+    minHeight: "100vh",
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5),
+    marginTop: "0", // Eliminar marginTop
   },
   mensajeRiesgo: {
     padding: theme.spacing(2),
