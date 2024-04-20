@@ -45,13 +45,13 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
 
-  const [contador, setContador] = useState(0);
-  const [sistolica, setSistolica] = useState(0);
-  const [diastolica, setDiastolica] = useState(0);
-  const [frecuenciaRespiratoria, setFrecuenciaRespiratoria] = useState(0);
-  const [frecuenciaCardiaca, setFrecuenciaCardiaca] = useState(0);
-  const [porcentajeO2, setPorcentajeO2] = useState(0);
-  const [temperatura, setTemperatura] = useState(0);
+  const [contador, setContador] = useState("");
+  const [sistolica, setSistolica] = useState("");
+  const [diastolica, setDiastolica] = useState("");
+  const [frecuenciaRespiratoria, setFrecuenciaRespiratoria] = useState("");
+  const [frecuenciaCardiaca, setFrecuenciaCardiaca] = useState("");
+  const [porcentajeO2, setPorcentajeO2] = useState("");
+  const [temperatura, setTemperatura] = useState("");
   const [estadoConciencia, setEstadoConciencia] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -149,6 +149,7 @@ function App() {
                 value={sistolica}
                 onChange={(e) => setSistolica(e.target.value)}
                 fullWidth
+                required
               />
             </Grid>
             <Grid item xs={12}>
@@ -159,6 +160,7 @@ function App() {
                 value={diastolica}
                 onChange={(e) => setDiastolica(e.target.value)}
                 fullWidth
+                required
               />
             </Grid>
             <Grid item xs={12}>
@@ -169,6 +171,7 @@ function App() {
                 value={frecuenciaRespiratoria}
                 onChange={(e) => setFrecuenciaRespiratoria(e.target.value)}
                 fullWidth
+                required
               />
             </Grid>
             <Grid item xs={12}>
@@ -179,6 +182,7 @@ function App() {
                 value={frecuenciaCardiaca}
                 onChange={(e) => setFrecuenciaCardiaca(e.target.value)}
                 fullWidth
+                required
               />
             </Grid>
             <Grid item xs={12}>
@@ -189,20 +193,26 @@ function App() {
                 value={porcentajeO2}
                 onChange={(e) => setPorcentajeO2(e.target.value)}
                 fullWidth
+                required
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
+                inputProps={{
+                  inputMode: "numeric",
+                  pattern: "[0-9]*",
+                  step: "any",
+                }}
                 label="Temperatura"
                 type="number"
                 value={temperatura}
                 onChange={(e) => setTemperatura(e.target.value)}
                 fullWidth
+                required
               />
             </Grid>
             <Grid item xs={12}>
-              <FormControl fullWidth className={classes.formControl}>
+              <FormControl fullWidth required className={classes.formControl}>
                 <InputLabel>Estado de Conciencia</InputLabel>
                 <Select
                   value={estadoConciencia}
@@ -215,7 +225,13 @@ function App() {
               </FormControl>
             </Grid>
           </Grid>
-          <Button variant="contained" color="primary" type="submit" fullWidth>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            fullWidth
+            required
+          >
             Calcular
           </Button>
         </form>
