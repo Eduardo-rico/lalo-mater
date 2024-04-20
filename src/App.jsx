@@ -14,7 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
     minWidth: 120,
   },
   centerContent: {
@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    paddingTop: theme.spacing(5), // Ajuste de padding en la parte superior
+    paddingTop: theme.spacing(10), // Ajuste de padding en la parte superior
+    marginTop: theme.spacing(5),
   },
   mensajeRiesgo: {
     padding: theme.spacing(2),
